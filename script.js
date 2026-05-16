@@ -286,6 +286,63 @@ document.addEventListener('DOMContentLoaded', () => {
                     });
                 });
             }
+            
+            // Auto swipe logic
+            let autoSwipeInterval;
+            
+            // Custom smooth scroll function to ensure transition works perfectly
+            // even if browser ignores behavior: 'smooth' with scroll-snap
+            const smoothScrollTo = (container, targetLeft, duration) => {
+                const startLeft = container.scrollLeft;
+                const distance = targetLeft - startLeft;
+                let startTime = null;
+                
+                // Temporarily disable snap to ensure smooth animation
+                const originalSnap = container.style.scrollSnapType;
+                container.style.scrollSnapType = 'none';
+                
+                const animation = (currentTime) => {
+                    if (startTime === null) startTime = currentTime;
+                    const timeElapsed = currentTime - startTime;
+                    const progress = Math.min(timeElapsed / duration, 1);
+                    
+                    // Ease-in-out function
+                    const ease = progress < 0.5 
+                        ? 2 * progress * progress 
+                        : -1 + (4 - 2 * progress) * progress;
+                        
+                    container.scrollLeft = startLeft + distance * ease;
+                    
+                    if (timeElapsed < duration) {
+                        requestAnimationFrame(animation);
+                    } else {
+                        // Restore snap after animation
+                        container.style.scrollSnapType = originalSnap || '';
+                    }
+                };
+                requestAnimationFrame(animation);
+            };
+
+            const startAutoSwipe = () => {
+                // Clear any existing interval just in case
+                if (autoSwipeInterval) clearInterval(autoSwipeInterval);
+                
+                autoSwipeInterval = setInterval(() => {
+                    const width = container.offsetWidth;
+                    const activeIndex = Math.round(container.scrollLeft / width);
+                    let nextIndex = activeIndex + 1;
+                    if (nextIndex >= slides.length) nextIndex = 0;
+                    
+                    smoothScrollTo(container, width * nextIndex, 800); // 800ms transition
+                }, 3500); // 3.5 seconds total
+            };
+            
+            // Only pause on touch to allow manual swiping
+            const stopAutoSwipe = () => clearInterval(autoSwipeInterval);
+            
+            startAutoSwipe();
+            container.addEventListener('touchstart', stopAutoSwipe, {passive: true});
+            container.addEventListener('touchend', startAutoSwipe, {passive: true});
         }
 
         // Desktop Drag Support
