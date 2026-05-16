@@ -18,6 +18,9 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="IMG_0262 - Copy.PNG">
+
     <!-- Styles -->
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -64,10 +67,6 @@
                 <a href="#events" class="hero-card event-card">
                     <i class="far fa-calendar-alt"></i>
                     <span>Nova Events</span>
-                </a>
-                <a href="#broker" class="hero-card broker-card">
-                    <i class="fas fa-handshake"></i>
-                    <span>Nova Broker</span>
                 </a>
                 <a href="#sounds" class="hero-card sound-card">
                     <i class="fas fa-music"></i>
@@ -209,14 +208,7 @@
                                 <img src="https://images.unsplash.com/photo-1542038784456-1ea8e935640e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
                                     alt="Portrait" class="service-img">
                             </div>
-                            <!-- Slide 2: Photographers -->
-                            <div class="swipe-slide" data-label="Photographers"
-                                style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; align-content: center;">
-                                <img src="b8655141-cb74-49f1-b15f-b64dafd85df7.jpg" alt="Tharul Jayakodi"
-                                    style="width: 100%; border-radius: 15px; object-fit: cover;">
-                                <img src="0b0ebf27-a961-49e8-98a0-b8f319d1821e - Copy.jpg" alt="Bihindu Basnayake"
-                                    style="width: 100%; border-radius: 15px; object-fit: cover;">
-                            </div>
+
                             <!-- Slide 3: Captured Photos (Grid) -->
                             <div class="swipe-slide" data-label="Captured by Nova Shoots"
                                 style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; align-content: center;">
@@ -285,38 +277,7 @@
             </div>
         </section>
 
-        <!-- 4. Nova Broker -->
-        <section id="broker" class="service-section division-broker"
-            data-bg="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop"
-            data-color="#0A84FF">
-            <div class="container glass-panel">
-                <div class="service-visual order-2">
-                    <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                        alt="Real Estate" class="service-img rounded shadow-blue">
-                </div>
-                <div class="service-content order-1">
-                    <div class="service-icon"><i class="fas fa-handshake"></i></div>
-                    <h2>Nova Broker</h2>
-                    <p class="service-desc">Your trusted property partner. Have land to sell? Looking to buy? We connect
-                        opportunities with outcomes.</p>
-                    <div class="highlight-banner">Have land? Contact us — we'll sell it for you</div>
-                    <ul class="service-list">
-                        <li><i class="fas fa-check"></i> Land Sales & Acquisition</li>
-                        <li><i class="fas fa-check"></i> Property Listing & Marketing</li>
-                        <li><i class="fas fa-check"></i> Buyer-Seller Connection</li>
-                        <li><i class="fas fa-check"></i> Legal Documentation Support</li>
-                        <li><i class="fas fa-check"></i> Site Visits & Evaluation</li>
-                        <li><i class="fas fa-check"></i> Investment Consulting</li>
-                    </ul>
-                    <div class="button-group">
-                        <a href="#contact" class="btn primary-btn broker-btn"
-                            onclick="selectContactReason('broker-sell')">List Your Property</a>
-                        <a href="#contact" class="btn secondary-btn broker-btn"
-                            onclick="selectContactReason('broker-buy')">Find Property</a>
-                    </div>
-                </div>
-            </div>
-        </section>
+
 
         <!-- 5. Nova Sounds -->
         <section id="sounds" class="service-section division-sounds"
@@ -420,17 +381,6 @@
         </section>
     </div>
 
-    <!-- New Section Placeholder -->
-    <section id="new-section" class="section new-section"
-        data-bg="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop"
-        data-color="#0A84FF">
-        <div class="container glass-panel">
-            <h2 class="section-title">New <span>Section</span></h2>
-            <p style="text-align: center; font-size: 1.2rem; color: var(--clr-light);">This space has been cleared for
-                your new content. Please let me know what you would like to display here.</p>
-        </div>
-    </section>
-
     <!-- Portfolio Section (Hidden per request) -->
     <section id="portfolio" class="section portfolio-section" style="display: none;"
         data-bg="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop"
@@ -443,7 +393,6 @@
                 <button class="filter-btn" data-filter="edits">Edits</button>
                 <button class="filter-btn" data-filter="photo">Photo</button>
                 <button class="filter-btn" data-filter="events">Events</button>
-                <button class="filter-btn" data-filter="broker">Broker</button>
                 <button class="filter-btn" data-filter="sounds">Sounds</button>
                 <button class="filter-btn" data-filter="band">Band</button>
             </div>
@@ -516,15 +465,6 @@
                     <button class="view-btn"><i class="fas fa-eye"></i></button>
                 </div>
             </div>
-            <div class="portfolio-item broker">
-                <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
-                    alt="Luxury Villa">
-                <div class="item-overlay">
-                    <h3>Lakeside Villa Sale</h3>
-                    <p>Nova Broker</p>
-                    <button class="view-btn"><i class="fas fa-eye"></i></button>
-                </div>
-            </div>
             <div class="portfolio-item sounds">
                 <img src="https://images.unsplash.com/photo-1516280440502-861f51390b1e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
                     alt="Studio Session">
@@ -558,9 +498,7 @@
                 <button class="tab-btn active" data-tab="tab-photo">Photography</button>
                 <button class="tab-btn" data-tab="tab-sounds">Sounds</button>
                 <button class="tab-btn" data-tab="tab-band">Band</button>
-                <button class="tab-btn" data-tab="tab-broker">Broker</button>
                 <button class="tab-btn" data-tab="tab-edits">Edits</button>
-                <button class="tab-btn" data-tab="tab-events">Events</button>
             </div>
 
             <div class="tab-content active" id="tab-photo">
@@ -594,33 +532,12 @@
                 </div>
             </div>
 
-            <div class="tab-content" id="tab-broker">
-                <div class="pricing-card">
-                    <h3>Real Estate Commission</h3>
-                    <p class="price"><span>3% Rate</span></p>
-                    <p>Standard 3% commission rate for land and property sales. Contact us for a precise quote on your
-                        property.</p>
-                    <a href="#contact" class="btn primary-btn" onclick="selectContactReason('broker-sell')">Get Custom
-                        Quote</a>
-                </div>
-            </div>
-
             <div class="tab-content" id="tab-edits">
                 <div class="pricing-card">
                     <h3>Video Editing</h3>
                     <p class="price"><span>Project Based</span></p>
                     <p>Per-minute or full project-based pricing depending on the complexity and VFX requirements.</p>
                     <a href="#contact" class="btn primary-btn" onclick="selectContactReason('edits')">Get Custom
-                        Quote</a>
-                </div>
-            </div>
-
-            <div class="tab-content" id="tab-events">
-                <div class="pricing-card">
-                    <h3>Event Management</h3>
-                    <p class="price"><span>Rs 20,000</span> / event</p>
-                    <p>Comprehensive event planning and management for corporate events, parties, and celebrations.</p>
-                    <a href="#contact" class="btn primary-btn" onclick="selectContactReason('events')">Get Custom
                         Quote</a>
                 </div>
             </div>
@@ -728,8 +645,6 @@
                                 <option value="edits">Nova Edits Project</option>
                                 <option value="photography">Photography Booking</option>
                                 <option value="events">Event Planning</option>
-                                <option value="broker-sell">Property Listing - I Have Land to Sell</option>
-                                <option value="broker-buy">Property Listing - I Want to Buy Land</option>
                                 <option value="sounds">Studio Booking (Sounds)</option>
                                 <option value="band">Band Booking</option>
                             </select>
@@ -775,7 +690,6 @@
                         <li><a href="#edits">Nova Edits</a></li>
                         <li><a href="#photography">Nova Photography</a></li>
                         <li><a href="#events">Nova Events</a></li>
-                        <li><a href="#broker">Nova Broker</a></li>
                         <li><a href="#sounds">Nova Sounds</a></li>
                         <li><a href="#band">Nova Band</a></li>
                     </ul>
@@ -791,7 +705,7 @@
             <div class="footer-bottom">
                 <p>&copy; 2026 NOVA. All rights reserved.</p>
                 <div class="footer-sub-brand">
-                    Nova Edits | Nova Photography | Nova Events | Nova Broker | Nova Sounds | Nova Band
+                    Nova Edits | Nova Photography | Nova Events | Nova Sounds | Nova Band
                 </div>
             </div>
         </div>
