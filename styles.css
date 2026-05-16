@@ -308,8 +308,9 @@ img {
 }
 
 .service-cards-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 20px;
     margin-bottom: 50px;
     width: 100%;
@@ -327,6 +328,7 @@ img {
     align-items: center;
     gap: 15px;
     transition: var(--transition);
+    flex: 0 1 180px;
 }
 
 .hero-card i {
